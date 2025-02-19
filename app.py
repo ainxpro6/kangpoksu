@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = "supersecretkey"  # Dibutuhkan untuk flash messages
 
 # Folder tujuan untuk menyimpan file yang diupload
-UPLOAD_FOLDER = r"C:\Users\user\script\uploads"  # Gantilah sesuai kebutuhan
+UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")  # Gantilah sesuai kebutuhan
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
@@ -47,4 +47,4 @@ def index():
 
 if __name__ == "__main__":
     os.makedirs("uploads", exist_ok=True)
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=8080, debug=True)
