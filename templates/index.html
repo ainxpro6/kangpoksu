@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload File PDF by : Schneziel</title>
+    <title>Upload File PDF</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -27,12 +27,24 @@
             <div class="mb-3">
                 <input type="file" name="file" class="form-control" required accept=".pdf, .xlsx">
             </div>
-            <button type="submit" class="btn btn-primary w-100">Upload & Proses</button>
+            <button type="submit" class="btn btn-primary w-100">Proses</button>
         </form>
 		
 		<!-- Kredit -->
 		<div class="text-center mt-4 text-muted" style="font-size: 14px;">
 		Powered by <strong>Davit Maulana</strong> | &copy; 2025
     </div>
+	
+	<script>
+    setTimeout(function () {
+        let alerts = document.querySelectorAll(".alert");
+        alerts.forEach(alert => {
+            alert.style.transition = "opacity 0.5s";
+            alert.style.opacity = "0";
+            setTimeout(() => alert.remove(), 500);
+        });
+    }, 5000);  // 5000ms = 5 detik
+	</script>
+
 </body>
 </html>
