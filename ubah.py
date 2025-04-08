@@ -28,7 +28,7 @@ def process_data(text):
     sku_pattern = r"SKU: ([^\n]+)"
     qty_pattern = r"Qty: (\d+)"
     
-    ignore_keywords = ["Jumlah produk", "TANJUNG PURA JAKARTA BARAT", "Tanggal Cetak", "Dicetak Oleh", "Jumlah Pesanan", "Picking List", "PICK", "Bogor Loji", "Halaman"]
+    ignore_keywords = ["Jumlah produk", "Buyer Notes", "Palembang", "TANJUNG PURA JAKARTA BARAT", "Tanggal Cetak", "Dicetak Oleh", "Jumlah Pesanan", "Picking List", "PICK", "Bogor Loji", "Halaman"]
     
     data = []
     current_product = {}
